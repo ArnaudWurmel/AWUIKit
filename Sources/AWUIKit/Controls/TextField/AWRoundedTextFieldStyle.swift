@@ -9,8 +9,8 @@
 import Foundation
 import SwiftUI
 
-struct AWRoundedTextFieldStyle: TextFieldStyle {
-    func _body(configuration: TextField<Self._Label>) -> some View {
+public struct AWRoundedTextFieldStyle: TextFieldStyle {
+    public func _body(configuration: TextField<Self._Label>) -> some View {
         configuration
             .padding()
             .background(Color.awCloud)
@@ -18,7 +18,7 @@ struct AWRoundedTextFieldStyle: TextFieldStyle {
     }
 }
 
-extension TextFieldStyle where Self == AWRoundedTextFieldStyle {
+public extension TextFieldStyle where Self == AWRoundedTextFieldStyle {
     static var awRounded: AWRoundedTextFieldStyle {
         AWRoundedTextFieldStyle()
     }
